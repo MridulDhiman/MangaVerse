@@ -1,0 +1,22 @@
+
+
+.yele {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+z-index: -1;
+}
+
+.main::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+background: rgba(0,0,0,0.2);
+z-index: 0;
+}

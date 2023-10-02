@@ -1,0 +1,9 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+   background-color: #172D3B;
+   color: #29B7FF;
+ padding: 0.7rem 2rem;
+}

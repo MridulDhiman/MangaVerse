@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+.filterList {
+    list-style-type: none;
+    display: flex;
+    font-size: 12px;
+    font-family: 'Dosis', sans-serif;
+    gap: 1.2rem;
+}
+
+li {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+svg {
+    fill: white;
+}
+
+

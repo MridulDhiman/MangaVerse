@@ -1,0 +1,10 @@
+
+
+.icon {
+    cursor: pointer;
+    margin: 0.54rem;
+}
+
+.icon:hover{
+    fill: red;
+}

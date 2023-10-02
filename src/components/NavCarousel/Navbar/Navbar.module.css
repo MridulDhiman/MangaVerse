@@ -1,0 +1,28 @@
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    -webkit-box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
+    -moz-box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
+    box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
+    
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.right {
+    display: flex;
+    align-items: center; 
+    gap: 1.4rem; 
+}
+.logo {
+    height: 3.3rem;
+}

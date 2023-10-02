@@ -1,0 +1,17 @@
+
+
+.icons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+    fill: #29B7FF;
+    height: 16px;
+}
+
+.icon:hover{
+    fill: white;
+}
