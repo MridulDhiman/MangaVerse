@@ -1,37 +1,28 @@
+//importing library functions 
+import React from "react";
+import {Routes, Route, Outlet} from "react-router-dom"
 
-import React, {useState} from "react"
+//importing components
 import Header from "./components/Header/Header";
-import Navbar from "./components/NavCarousel/Navbar/Navbar";
-import Carousel from "./components/NavCarousel/Carousel/Carousel";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/NavCarousel/Navbar/Navbar"
 
-import "./App.css";
-/*
-Nature of Header: 
-1. dynamic : 1 in centre is dynamic 
-2. static : 2 parts are static 
-*/
+//importing styles 
+import appStyles from "./App.module.css"
+
 const App = () => {
-  const [isSearchClicked, setIsSearchClicked] = useState(false);
-  const handleBodyClick = () => {
-    console.log("body is clicked");
-    if(isSearchClicked === true) {
-      setIsSearchClicked(false);
-    }
-  }
-  
-
-  const handleSearchClick = (flag) => {
-            setIsSearchClicked(flag);
-  }
-  return (
-    <div className={isSearchClicked ? "main" : 'yele'} onClick={handleBodyClick}>
-    <Header />
- <Navbar searchClicked={isSearchClicked} onSearchClick={handleSearchClick}/>
- <Carousel/>
-   
-   
-    </div>
-  )
+return <div className={appStyles.container}>
+<Header/>
+<Navbar/>
+<Outlet/>
+{/* <Routes>
+<Route path="/" element={<Home/>}></Route>
+<Route path="/track-order" element = {<TrackOrder/>}></Route>
+<Route path="/offers-discount-coupon" element = {<Coupons/>}></Route>
+<Route path="/contact" element={<Help/>}></Route>
+</Routes> */}
+<Footer/>
+</div>
 };
 
 export default App;

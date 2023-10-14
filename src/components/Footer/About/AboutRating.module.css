@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+.rating {
+display: flex;
+margin-right: 8rem;
+align-items: center;
+}
+
+.ratingText {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+}
+
+.heading {
+    font-family: 'Bungee', cursive;
+    font-size: 1em;
+}
+
+.ratingLogo {
+    height: 28px;
+    margin-right: 1rem;
+}

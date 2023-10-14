@@ -1,0 +1,21 @@
+
+
+
+.links  {
+    align-self: flex-start;
+}
+.links, .link {
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+.link:hover {
+color: #29B7FF;
+}
+
+li {
+ margin: 0.5rem 0;  
+}

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Dosis&display=swap');
+
+.container {
+    background-color: #d9e2e6;
+    color: #172d3b;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem 2.8rem 3rem;
+    gap: 5rem;
+}

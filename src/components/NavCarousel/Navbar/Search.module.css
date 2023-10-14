@@ -3,23 +3,25 @@
 
 .search {
     display: flex;
-
     padding: 0.6rem 0.5rem;
     border-radius: 4px;
     margin-right: 0.3rem;
     font-family: 'Dosis', sans-serif;
   background: white;
+  z-index: 4;
 }
 
 .searchNew {
-    display: flex;
-    
+    display: flex;   
     padding: 0.6rem 0.5rem;
     border-radius: 4px;
     margin-right: 0.3rem;
     background: white;
     font-family: 'Dosis', sans-serif;
-    z-index: 1;
+    position: absolute;
+    right: 10.95rem;  
+    top: 4.22rem;
+  z-index: 4;
 }
 
 .search-icon {

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+.list {
+    list-style-type: none;
+}
+
+.list-container {
+    color: white; 
+    font-family: 'Bungee', cursive;
+}
+
+.list-item {
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+.list-item:hover {
+    color: #29B7FF;
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+.links-container {
+    background-color: #172d3b;
+    color: #d9e2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+    /* padding-left: 0; */
+    gap: 5rem;
+
+    border: 1px solid red;
+}

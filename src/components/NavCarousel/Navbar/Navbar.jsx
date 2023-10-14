@@ -4,6 +4,7 @@ import navStyles from "./Navbar.module.css";
 import Filters from "./Filters";
 import Search from "./Search";
 import InfoIcons from "./InfoIcons";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({searchClicked, onSearchClick}) => {
 
@@ -15,7 +16,7 @@ const Navbar = ({searchClicked, onSearchClick}) => {
         <div className={navStyles["nav-container"]}>
             <div className={navStyles["left"]}>
                 <Filters/>
-                 <a href="https://comicsense.store" target="_blank"><img className={navStyles['logo']} src="comic-sense-logo.png"></img></a> 
+                <NavLink to="/"><img className={navStyles['logo']} src="comic-sense-logo.png"></img></NavLink>
             </div>
             <div className={navStyles["right"]}>
               <Search isFilterClicked={searchClicked} setFlag={handleInputClick}/>

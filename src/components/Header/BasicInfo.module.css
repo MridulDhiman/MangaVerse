@@ -9,9 +9,15 @@
 }
 
 
-span {
-    cursor: pointer;
+
+.link {
+    text-decoration: none;
+    color: #29B7FF;
 }
-span:hover {
+
+
+
+.link:hover {
     color: white;
 }
+

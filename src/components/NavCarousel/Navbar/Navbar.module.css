@@ -4,12 +4,11 @@
     justify-content: space-between;
     padding: 1rem 3rem;
     position: absolute;
-    z-index: 3;
+   z-index: 1;
     color: white;
     -webkit-box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
     -moz-box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
     box-shadow: inset 0px 56px 42px -8px rgba(0,0,0,0.41);
-    
 }
 
 .left {
