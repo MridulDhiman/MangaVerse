@@ -1,35 +1,35 @@
+
+ * {
+  box-sizing: border-box;
+ }
 .filter {
     background-color: hsl(198, 21%, 88%);
-    /* margin-top: 4rem; */
    padding: 0 1.5rem;
    position: relative;
-   top: 5rem;
-   /* border: 1px solid red; */
+   top: 7rem;
+   left: 2rem;
     font-family: "Dosis", sans-serif;
     font-size: 12px;
     cursor: pointer;
     color:rgba(23, 45, 59, 0.8);
     font-weight: 600;
-    width: 30vw;
+    width: 42vw;
   display: flex;
   justify-content: space-between;
   height: 100%;
+  margin-bottom: 0;
 }
 
 .item {
-    height: 100%;
-    padding: 2rem 0;
+  height: 100%;
+  padding: 1.6rem 0;
 }
 
 .itemText {
-    padding: 2rem 0;
-}
-
-.itemText:hover {
-    border-bottom: 2px solid #29B7FF;
+padding-bottom: 1.5rem;
 }
 
 .item:hover {
-    border-bottom: 2px solid #29B7FF;
+  border-bottom: 2px solid #29B7FF;
 }
 

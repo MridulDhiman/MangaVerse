@@ -16,7 +16,9 @@ const Carousel = () => {
     scrollOnDevice={true}
     slidesSpacing={0}
     autoCycle={true}
-
+    animationDuration={400}
+    cycleInterval={2000}
+    pauseOnHover={true}
     > 
         <div><img className={sliderStyles['slide']} src="carousel_1.jpg" alt="" /></div>
         <div><img className={sliderStyles['slide']} src="carousel_2.jpg" alt="" /></div>

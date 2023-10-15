@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+import useBreakpoints from '../../../../CustomHooks/useBreakpoints';
 const animeNames = ['Anime Movies', "Chainsaw Man", "Dragon Ball", "JoJo", "One Piece", "Tokyo Revengers",
                     'AOT', "Cowboy Bebop", "Fairy Tail", "Jujutsu Kaisen", "One Punch Man", "Your Name"];
 const secondAnimeList = ["Assassination Classroom", "Darling in the Franxx", "Fullmetal Alchemist", "Mob Psycho 100", "Senpai Collection", 
@@ -8,9 +10,10 @@ const secondAnimeList = ["Assassination Classroom", "Darling in the Franxx", "Fu
                     "Blue Lock", "Dr. Stone", "Hunter x Hunter", "Shinobi", "Tokyo Ghoul"];
 
 import animeFilterStyling from "./AnimeFilter.module.css"
-export default function AnimeFilter({marginStyles}) {
+export default function AnimeFilter({marginStyles, styles}) {
+    const {isFirstMediaQuery, isSecondMediaQuery} = useBreakpoints();
   return (
-    <div className={animeFilterStyling.filter} style={marginStyles}>
+    <div className={animeFilterStyling.filter} style={isSecondMediaQuery? styles : isFirstMediaQuery ? marginStyles: {}}>
         <div className={animeFilterStyling.listRenderer}>
             <div className={animeFilterStyling.list1}>
                 {

@@ -1,31 +1,20 @@
 import React from 'react'
 
+import categoriesFilterStyles from "./TopCategoriesFilter.module.css";
 
-import categoriesFilter from "./TopCategoriesFilter.module.css";
+export default function TopCategoriesFilter() {
+  const items = ['Oversized Tees', "Shirts", "Hoodies/Jackets", "Body Pillow Covers", "Figurines", "Manga", "Wall Decor", "Sticker"];
 
-
-export default function TopCategoriesFilter({onMouseOver, onMouseLeave}) {
+  const itemlist = items.map((item, index) => {
+    return<>
+         <div key={index} className={categoriesFilterStyles.item}><span className={categoriesFilterStyles.itemText}>{item}</span></div>
+         <hr className={categoriesFilterStyles.line} />
+    </>
+  })
   return (
-    <div className={categoriesFilter["filters"]} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
-      <div> <span>Oversized Tees</span></div>
-      <hr />
-      <div><span>Shirts</span></div>
-      <hr />
-      <div><span>Hoodies/Jackets</span></div>
-      <hr />
-      <div><span>Body Pillow Covers</span></div>
-      <hr />
-      <div><span>Figurines</span></div>
-      <hr />
-      <div><span>Manga</span></div>
-      <hr />
-      <div><span>Wall Decor</span></div>
-      <hr />
-      <div><span>Sticker</span></div>
-      <hr />
-      <div><span>Cosplay</span></div>
+    <div className={categoriesFilterStyles.filters}>
+       {itemlist}
+      <div  className={categoriesFilterStyles.item}><span>Cosplay</span></div>
     </div>
-    
-    
   )
 }
