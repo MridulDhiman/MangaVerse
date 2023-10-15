@@ -21,13 +21,22 @@ const Home = () => {
     }
   }
   
-
+const styles = {
+    display: 'flex',
+    width: '100%',
+    justifyContent : 'space-between',
+    padding: '1rem 3rem',
+    position: 'absolute',
+   zIndex: 2,
+    color: 'white',
+    // background: 'transparent'
+};
   const handleSearchClick = (flag) => {
             setIsSearchClicked(flag);
   }
   return (
     <div className={isSearchClicked ? "main" : 'yele'} onClick={handleBodyClick}>
- <Navbar searchClicked={isSearchClicked} onSearchClick={handleSearchClick}/>
+ <Navbar searchClicked={isSearchClicked} onSearchClick={handleSearchClick} style={styles} />
  <Carousel/>
     </div>
   )

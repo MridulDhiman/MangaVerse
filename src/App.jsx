@@ -1,6 +1,6 @@
 //importing library functions 
 import React from "react";
-import {Routes, Route, Outlet} from "react-router-dom"
+import {Routes, Route, Outlet, useLocation} from "react-router-dom"
 
 //importing components
 import Header from "./components/Header/Header";
@@ -9,11 +9,37 @@ import Navbar from "./components/NavCarousel/Navbar/Navbar"
 
 //importing styles 
 import appStyles from "./App.module.css"
+const NavBarStyles =  {
+    display: "flex",
+    width: '100%',
+    justifyContent: 'space-between',
+    padding: '1rem 3rem',
+    color: 'black',
+    position: "relative",
+    background: "white",
+    boxShadow: "inset 0px 0px 0px white",
+}
+
+const svgStyles = {
+    fill : "black"
+}
+
+const searchStyles = {
+    display: 'flex',
+    padding: '0.6rem 0.5rem',
+    borderRadius:'4px',
+    marginRight: '0.3rem',
+    fontFamily: "'Dosis', sans-serif",
+    background: "white",
+    border: "1px solid lightgrey"
+}
+
 
 const App = () => {
+    const location = useLocation();
 return <div className={appStyles.container}>
 <Header/>
-<Navbar/>
+{location.pathname!== "/" && <Navbar svgStyles={svgStyles} styles={NavBarStyles} searchStyles={searchStyles}/>}
 <Outlet/>
 {/* <Routes>
 <Route path="/" element={<Home/>}></Route>

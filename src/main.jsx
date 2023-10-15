@@ -21,10 +21,6 @@ const router = createBrowserRouter([
     element: <TrackOrder/>
    },
    {
-    path: "offers-discount-coupon",
-    element: <Coupons/>
-   },
-   {
     path: "contact",
     element: <Help/>
    },
@@ -32,10 +28,7 @@ const router = createBrowserRouter([
     path: "offers-discount-coupon",
     element: <Coupons/>
   }
-  , {
-    path: "contact",
-    element: <Help/>
-  }]
+  ]
 }
 ]);
 

@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import searchStyles from "./Search.module.css";
+import searchhStyles from "./Search.module.css";
 import SearchOverlay from "./SearchOverlay";
 
-const Search = ({setFlag, isFilterClicked}) => {
+const Search = ({setFlag, isFilterClicked, searchStyles}) => {
   
     const handleClick = () => {
         setFlag(true);
@@ -27,12 +27,12 @@ const handleOverLayClick = () => {
 }
   
  if(!isFilterClicked) {
-    return <SearchOverlay className={searchStyles.search} onClick={handleClick}/>;
+    return <SearchOverlay className={searchhStyles.search} searchStyles={searchStyles}  onClick={handleClick}/>;
  }
     return (
         <>
         {ReactDOM.createPortal(<div style={BACKDROP_STYLING}></div>, document.getElementById("backdrop-root"))}
-        { ReactDOM.createPortal(<SearchOverlay className={searchStyles.searchNew} onClick={handleOverLayClick}/>,document.getElementById("search-root"))}
+        { ReactDOM.createPortal(<SearchOverlay className={searchhStyles.searchNew} searchStyles={searchStyles} onClick={handleOverLayClick}/>,document.getElementById("search-root"))}
         </>
     )
 }

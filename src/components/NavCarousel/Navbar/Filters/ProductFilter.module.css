@@ -1,0 +1,14 @@
+.filter {
+    background-color: hsl(198, 21%, 88%);
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-family: "Dosis", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position:relative;
+    margin-left: 5vw;
+    gap: 4.5rem;
+}
