@@ -7,6 +7,8 @@ import TrackOrder from './Pages/TrackOrder.jsx';
 import Coupons from './Pages/Coupons.jsx';
 import Help from './Pages/Help.jsx';
 import Home from './Pages/Home.jsx';
+import Products from './Pages/Products.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "offers-discount-coupon",
     element: <Coupons/>
+  }
+  , {
+    path : "products",
+    element: <Products/>
   }
   ]
 }

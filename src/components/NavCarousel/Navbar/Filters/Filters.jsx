@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import {Popover} from "react-tiny-popover";
+import { Link,useLocation} from "react-router-dom";
+
 
 
 import TopCategoriesFilter from "./TopCategoriesFilter";
@@ -8,6 +10,7 @@ import AnimeFilter from "./AnimeFilter";
 import MoreFilter from "./MoreFilter";
 import MoreOtherFilter from "./MoreOtherFilter";
 import FilterUtil from "./FilterUtil";
+import Products from "../../../../Pages/Products";
 
 import useBreakpoints from "../../../../CustomHooks/useBreakpoints";
 import filterStyles from "./Filters.module.css";
@@ -26,39 +29,50 @@ const Container1 = ({className, children, onMouseOver, onMouseLeave}) => {
     </>
 }
 
+const Filters = () => {
+    const [itemsOpen, setItemsOpen] = useState(new Array(3).fill(false));
+    const {isFirstMediaQuery, isSecondMediaQuery} = useBreakpoints();
+    const location = useLocation();
+
+    
 const itemsContent = [
     {
         id: 1,
         text: "TOP CATEGORIES",
         hasSymbol: true,
-        symbol: <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
+        symbol: <svg style={{fill: location.pathname!=="/" && "black"  }} xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
         align: "start",
         hasContent: true,
         PopoverContent: TopCategoriesFilter,
+        hasClickEvent: false,
     },
      {
         id: 2,
         text: "SHOP BY PRODUCT",
         hasSymbol: true,
-        symbol: <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
+        symbol: <svg style={location.pathname!=="/" ? {fill:"black"} : {}} xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
         align: "center",
         hasContent: true,
         PopoverContent: ProductFilter,
+        hasClickEvent: false,
      }, 
      {
         id: 3,
         text: "SHOP BY ANIME",
         hasSymbol: true,
-        symbol: <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
+        symbol: <svg style={location.pathname!=="/" ? {fill:"black"} : {}} xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
         align: "center",
         hasContent: true,
-        PopoverContent: AnimeFilter
+        PopoverContent: AnimeFilter,
+        hasClickEvent: false,
      }, {
         id: 4,
         text: "PRODUCTS",
         hasSymbol: false,
         align: "center",
         hasContent: false,
+        hasClickEvent: true,
+        textAlternate : <Link to="/products" element={<Products/>}></Link>
      },
         {
             id: 5,
@@ -66,6 +80,7 @@ const itemsContent = [
             hasSymbol: false,
             align: "center",
             hasContent: false,
+            hasClickEvent: false
          }
      
 ]
@@ -79,10 +94,11 @@ const itemsWith1stMediaQuery = [
         id: 3,
         text: "MORE",
         hasSymbol: true,
-        symbol: <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
+        symbol: <svg style={location.pathname!=="/" ? {fill:"black"} : {}} xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
         align: "center",
         hasContent: true,
-        PopoverContent: MoreFilter
+        PopoverContent: MoreFilter,
+        hasClickEvent: false,
     }
 
 ]
@@ -93,15 +109,13 @@ const itemsWith2ndMediaQuery = [
         id: 2, 
         text: "MORE",
         hasSymbol: true,
-        symbol: <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
+        symbol: <svg style={location.pathname!=="/" ? {fill:"black"} : {}} xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 15 15" aria-label="Menu dropdown icon"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg>,
         align: "center",
         hasContent: true,
         PopoverContent: MoreOtherFilter,
+        hasClickEvent:false,
     }
 ]
-const Filters = () => {
-    const [itemsOpen, setItemsOpen] = useState(new Array(3).fill(false));
-    const {isFirstMediaQuery, isSecondMediaQuery} = useBreakpoints();
     // const [isItemWith1stMediaOpen, setIsItemWith1stMediaOpen] = useState(new Array(3).fill(false));
 
     

@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 
 import FilterUtil from './FilterUtil';
 import ProductFilter from './ProductFilter';
 import AnimeFilter from './AnimeFilter';
+import Products from '../../../../Pages/Products';
 
 import filterStyles from "./MoreOtherFilter.module.css";
 
@@ -16,7 +18,9 @@ const elements = [
    align: "center",
    hasContent: true,
    PopoverContent: ProductFilter,
+   hasClickEvent: false,
 },
+
  {
 id: 2, 
 text: "SHOP BY ANIME",
@@ -25,13 +29,17 @@ symbol: <svg style={{fill: "rgba(23, 45, 59, 0.8)"}} xmlns="http://www.w3.org/20
 align: "center",
 hasContent: true,
 PopoverContent: AnimeFilter,
+hasClickEvent: false,
 },
 {
    id: 3,
-   text: "COMBOS",
+   text: "PRODUCTS",
    hasSymbol: false,
    align: "center",
    hasContent: false,
+   hasClickEvent: true,
+   textAlternate: <Link to="/products" element={<Products/>}></Link>
+
 }, 
 {
    id: 4, 
@@ -39,6 +47,7 @@ PopoverContent: AnimeFilter,
    hasSymbol: false,
    align: "center",
    hasContent: false,
+   hasClickEvent: false,
 }
 ]
 

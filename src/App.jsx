@@ -10,10 +10,15 @@ import Navbar from "./components/NavCarousel/Navbar/Navbar"
 //importing styles 
 import appStyles from "./App.module.css"
 const NavBarStyles =  {
+    /*
+    padding: 0 3rem;
+    height: 5rem;
+    */
     display: "flex",
     width: '100%',
     justifyContent: 'space-between',
-    padding: '1rem 3rem',
+    padding: '0 3rem',
+    height: "5rem",
     color: 'black',
     position: "relative",
     background: "white",
@@ -21,7 +26,7 @@ const NavBarStyles =  {
 }
 
 const svgStyles = {
-    fill : "black"
+    fill : "black",
 }
 
 const searchStyles = {
