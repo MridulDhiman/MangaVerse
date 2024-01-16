@@ -7,7 +7,7 @@ import Search from "./Search";
 import InfoIcons from "./InfoIcons";
 
 import navStyles from "./Navbar.module.css";
-const Navbar = ({ svgStyles,  styles, searchStyles}) => {
+const Navbar = ({flag, svgStyles,  styles, searchStyles}) => {
     const {isFirstMediaQuery}  = useBreakpoints();
 
     return (
@@ -15,7 +15,7 @@ const Navbar = ({ svgStyles,  styles, searchStyles}) => {
             <div className={navStyles["left"]}>
                 <Filters/>
                 {/* <NavLink to="/"><img style={{marginLeft: isFirstMediaQuery && "3.5rem"}} className={navStyles['logo']} src="/comic-sense-logo.png"></img></NavLink> */}
-                <Link className={navStyles.link} to="/"><span className={navStyles['logo']}>MangaVerse</span></Link>
+                <Link className={navStyles.link} to="/"><span className={flag ? navStyles.logoAlt: navStyles['logo']}>MangaVerse</span></Link>
 
             </div>
             <div className={navStyles["right"]}>

@@ -72,6 +72,7 @@ useEffect(()=> {
           <Header />
           {location.pathname !== "/" && (
             <Navbar
+              flag={true}
               svgStyles={svgStyles}
               styles={NavBarStyles}
               searchStyles={searchStyles}
