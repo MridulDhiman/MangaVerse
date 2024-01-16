@@ -26,11 +26,11 @@
 .logo {
     /* height: 3.3rem; */
 text-decoration: none !important;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Black Ops One', sans-serif;
   /* color: #172D3B;*/
      text-shadow: 2px 4px 3px black; 
-   
+   margin-left: 0.8rem;
     letter-spacing: 2.5px;
     
     /* color: #172D3B; */
@@ -41,9 +41,10 @@ text-decoration: none !important;
 }
 
 .logoAlt {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Black Ops One', sans-serif;
   color: #172D3B;
+  margin-left: 0.8rem;
      /* text-shadow: 2px 4px 3px black;  */
     letter-spacing: 2.5px;
 }
