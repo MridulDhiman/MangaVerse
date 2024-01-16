@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    margin: 2rem 6rem;
+    padding: 0.6rem;
+    font-family: "Dosis", sans-serif;
+    /* border: 1px solid red;  */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.filterContainer{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    border: 0.5px solid rgb(211 211 211 /0.8);
+    padding: 0.6rem 0.7rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filterContainer:hover {
+    color: white;
+    background: #FF3B60; 
+}
+
+
+.dropDownContainer {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.6rem 0.7rem;
+    font-family: "Dosis", sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    border: 2.4px solid rgb(173 216 230 /0.6);
+    border-radius: 0.5rem;
+}
+
+
+.dropDownContainer:focus,.dropDownContainer:active {
+    color: #29B7FF;
+    border: 2.4px solid #29B7FF;
+    outline: none;
+}
+

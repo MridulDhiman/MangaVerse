@@ -1,0 +1,16 @@
+.container {
+background-color: rgb(253 253 253);
+margin: 2rem;
+font-family: 'Dosis', sans-serif;
+display: flex;
+flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+

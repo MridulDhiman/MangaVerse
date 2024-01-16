@@ -14,7 +14,7 @@ export default function TopCategoriesFilter() {
   return (
     <div className={categoriesFilterStyles.filters}>
        {itemlist}
-      <div  className={categoriesFilterStyles.item}><span>Cosplay</span></div>
+      <div key={items.length} className={categoriesFilterStyles.item}><span>Cosplay</span></div>
     </div>
   )
 }

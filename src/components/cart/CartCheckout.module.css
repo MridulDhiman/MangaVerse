@@ -1,0 +1,61 @@
+.container {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+width: 25%;
+  border: 2px solid lightblue;
+  border-radius: 2px; 
+  font-family: "Dosis", sans-serif;
+  height: fit-content;
+}
+
+.btn {
+  width: 100%;
+   padding: 0.75rem 1rem;
+   text-align: center;
+   font-family: "Dosis", sans-serif;
+   font-weight: 600;
+   background-color:  #192a3d;
+   border-radius: 2px;
+   color: white;
+   margin-top:0.5rem;
+cursor: pointer;
+  
+}
+
+.btn:hover {
+  background-color:  rgba(25, 42, 61, 0.6);
+
+}
+.total, .checkOutItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed lightblue;
+}
+
+.checkOutItem {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed lightblue;
+}
+
+
+
+.btn, .btn:active, .btn:focus, .btn:hover{
+border: none;
+outline: none;
+}
+
+.heading {
+  font-family: "Bungee", sans-serif;
+  font-size: 15px;
+  color: #192a3d;
+  text-transform: capitalize;
+}
+

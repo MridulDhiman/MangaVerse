@@ -1,0 +1,23 @@
+.container {
+    padding : 2rem;
+overflow: hidden;
+}
+
+.top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    margin-block-end: 1rem;
+}
+
+.icon {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.content {
+    font-family: "Dosis", sans-serif;
+}
+

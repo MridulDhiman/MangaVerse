@@ -1,0 +1,53 @@
+
+.content {
+    font-size: 25px;
+    color: #192a3d;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 0.75rem;
+}
+
+.actualPrice {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 600;
+}
+.discountedPrice {
+    font-size: 16px;
+    position: relative;
+    bottom: 2px;
+    color: rgba(128, 128, 128);
+}
+
+.priceContainer {
+    display: flex;
+    gap: 5px;
+    align-items:center;
+    font-weight: 400;
+}
+
+.discount {
+    background-color: #ff3b60;
+    font-size: 1rem;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.offer {
+    font-size: 0.9rem;
+}
+
+.badgeContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.badgeContainer img {
+    width: 4.5rem;
+    height: 5rem;
+}

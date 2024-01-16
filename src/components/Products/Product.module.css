@@ -1,0 +1,103 @@
+
+:root {
+    --card-width : 15rem;
+}
+
+
+.img {
+    height: 20rem;
+    width: var(--card-width);
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.card {
+    width: var(--card-width);
+    border: 1px solid rgba(128, 128, 128, 0.12);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-size: 14px;
+}
+
+.img-container {
+    width: var(--card-width);
+    overflow: hidden;
+    position: relative; 
+    height: 25rem;
+}
+
+
+.svg {
+    fill: black;
+    transition: fill 0.1s;
+}
+
+
+.svg-container {
+    position: absolute; 
+    top: 0.5rem;
+    right: 1rem;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 white;
+    transition-duration: 0.1s;
+}
+
+.svg-container:hover {
+    box-shadow: 1px 1px 6px 1px #FF3B60;
+    -webkit-box-shadow: 1px 1px 6px 1px #FF3B60;
+    -moz-box-shadow: 1px 1px 6px 1px #FF3B60;
+}
+
+.img-content-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--card-width);
+    align-items: center;
+    cursor: pointer;
+}
+
+.margin {
+    margin: 0.2rem 0.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.2rem;
+    width: 12rem;
+    
+}
+
+
+
+
+.price-container {
+    border: 1px solid rgba(128, 128, 128, 0.12);
+    padding: 1rem 0;
+}
+
+.actualPrice {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.discountedPrice {
+    font-size: 0.6rem;
+    position: relative;
+    bottom: 4px;
+    color: rgba(128, 128, 128);
+}
+
+.sizeChart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}

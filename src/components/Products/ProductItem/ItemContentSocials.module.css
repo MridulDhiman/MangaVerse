@@ -1,0 +1,15 @@
+.icon {
+    color: blue;
+    font-size: 1rem;
+    filter:invert();
+    opacity: 0.8;
+    
+    cursor: pointer;
+}
+
+
+
+.iconContainer {
+    display :flex;
+    gap: 1rem;
+}

@@ -1,0 +1,65 @@
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23.1px;
+}
+
+.btn {
+    width: fit-content;
+    background:  #172D3B;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    border-radius: 2.6px;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:active {
+    outline: none;
+    border: none;
+}
+
+.input {
+   
+    width: 42em;   
+    height: 2.5rem;
+    border: 2px solid rgba(0,255,255, 0.5);
+    border-radius: 8px;
+    padding: 1rem;
+    color: #29B7FF;
+    position: relative;
+}
+
+.input:active, .input:focus {
+    border: 2px solid #29B7FF;
+outline: none;
+}
+
+.label {
+    color: black;
+}
+
+.check {
+    
+    /* appearance: none; */
+    border: 1px solid cyan;
+    border-radius: 3px;
+    border: none;
+    accent-color: blueviolet;
+    padding: 0.3rem;
+}
+
+
+
+
+
+

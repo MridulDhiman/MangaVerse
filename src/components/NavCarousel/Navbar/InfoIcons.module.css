@@ -8,3 +8,22 @@
 .icon:hover{
     fill: red;
 }
+
+
+.likeCount {
+    color: white;
+    font-family: "Dosis", sans-serif;
+    background:#29B7FF;
+    font-size: 10px;  
+    width: 0.87rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    right: 5.35rem;
+    top: 1.55rem;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 0.8rem;
+}
+

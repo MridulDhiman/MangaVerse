@@ -1,0 +1,98 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    left: 0;
+    
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: #29B7FF;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    width: 100%;
+    font-family: "Bungee", sans-serif;
+    
+    padding: 0 4rem;
+}
+
+.discountedPrice {
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+    color: #20729D
+}
+
+.actualPrice {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 600;
+    color: #172d3b
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inStock {
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: relative;
+    bottom: 5px;
+}
+
+.btn {
+    border-radius: 0.2rem;
+    outline: none;
+border:none;
+cursor: pointer;
+padding: 0.8rem;
+font-family: "Dosis", sans-serif;
+font-weight: 600;
+color: white;
+background: #172d3b;
+}
+
+.btn:active, .btn:focus{
+    outline: none;
+    border:none;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.itemQuantity {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-family: "Dosis", sans-serif;
+}
+
+.itemQuantity p {
+    width: 1rem;
+    text-align: center;
+}
+
+
+.qtyBtn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    vertical-align: center;
+    border: none;
+}
+
+.qtyBtn:active, .qtyBtn:focus  {
+    border: none;
+    outline: none;
+}

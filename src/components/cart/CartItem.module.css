@@ -1,0 +1,68 @@
+.img {
+  width: 4rem;
+  height: 5rem;
+}
+
+.container {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 1px dashed lightblue;
+}
+
+.containerMiddle {
+  display: flex;
+  align-items:center;
+  gap: 9.3rem;
+  width: 39%;
+}
+
+
+.productContent {
+  display: flex;
+  /* border: 1px solid red;   */
+  gap: 1rem;
+width: 61%;
+}
+
+.actualContent {
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.7rem;
+  gap: 1rem;
+  /* border: 1px solid black; */
+   
+}
+
+
+.quantity {
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+.subTotal {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  border:none;
+  outline: none;
+}
+
+.icon {
+  filter: invert(0.8);
+  font-size: 1rem;
+}
+
+.icon:hover {
+  filter: invert(0.5)
+}

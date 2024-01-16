@@ -1,0 +1,62 @@
+.actualPrice {
+  /* font-size: 15px; */
+  line-height: 33px;
+  font-weight: bolder;
+}
+
+.subTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  /* gap: 1rem; */
+}
+
+.btn {
+
+  padding: 0.7rem;
+  border-radius: 2px;
+  background: rgb(23, 45, 59);
+  color: white;
+  border:none;
+  cursor: pointer;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  width:100%;
+}
+
+.btn:hover, .btn:active,.btn:focus {
+border:none;
+outline: none;
+
+background-color: rgba(23, 45, 59, 0.5);
+}
+
+
+.container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* border: 1px solid black;  */
+  width: 24%;
+ 
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+
+  z-index: 1;
+  /* border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem; */
+  /* border-top: 1px solid #172d3b; */
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+ width:100%;
+
+  gap: 10px;
+  justify-content: flex-end;
+}

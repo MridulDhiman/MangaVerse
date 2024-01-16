@@ -1,7 +1,11 @@
 import React from 'react'
 
+import CouponsAndOrders from '../components/CouponsAndOrders'
+
 export default function Coupons() {
   return (
-    <div>Coupons</div>
+    <div>
+   <CouponsAndOrders/>
+    </div>
   )
 }

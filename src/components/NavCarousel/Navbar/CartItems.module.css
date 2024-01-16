@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;
+    height: 30rem;
+
+padding-right: 2rem;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  .container::-webkit-scrollbar-track {
+    background: rgba(11, 10, 10, 0.3);
+    border-radius: 32px;
+    /* background-color: black ; */
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    /* background-color: #8f54a0; */
+    background-color: #172d3b;
+    border-radius: 32px;
+    /* border: 1px solid #ffffff; */
+  }
