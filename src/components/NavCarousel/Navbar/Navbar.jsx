@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import useBreakpoints from "../../../CustomHooks/useBreakpoints";
 import Filters from "./Filters/Filters";
@@ -14,7 +14,9 @@ const Navbar = ({ svgStyles,  styles, searchStyles}) => {
         <div className={navStyles["nav-container"]} style={styles}>
             <div className={navStyles["left"]}>
                 <Filters/>
-                <NavLink to="/"><img style={{marginLeft: isFirstMediaQuery && "3.5rem"}} className={navStyles['logo']} src="/comic-sense-logo.png"></img></NavLink>
+                {/* <NavLink to="/"><img style={{marginLeft: isFirstMediaQuery && "3.5rem"}} className={navStyles['logo']} src="/comic-sense-logo.png"></img></NavLink> */}
+                <Link className={navStyles.link} to="/"><span className={navStyles['logo']}>MangaVerse</span></Link>
+
             </div>
             <div className={navStyles["right"]}>
               <Search  searchStyles={searchStyles}/>

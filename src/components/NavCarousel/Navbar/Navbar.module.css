@@ -24,6 +24,23 @@
     gap: 1.4rem; 
 }
 .logo {
-    height: 3.3rem;
+    /* height: 3.3rem; */
+text-decoration: none !important;
+    font-size: 2rem;
+    font-family: 'Black Ops One', sans-serif;
+  color: #172D3B;
+    text-shadow: 2px 1px 5px white;
+    letter-spacing: 2.5px;
+    
+    /* color: #172D3B; */
+    /* text-shadow: 6px 4px 0px rgba(41, 184, 254, 0.41);  */
+   /* text-shadow:  3px -1px 0px rgba(0,0,0,0.37); */
+   /* text-shadow: -5px 0px 5px rgba(0,0,0,0.59);} */
+   /* -webkit-text-stroke: 1px white; */
+}
+.link {
+    text-decoration: none;
+    color: white;
+    
 }
 

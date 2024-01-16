@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styles from "./CartCheckout.module.css"
 import { useNavigate } from 'react-router-dom'
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { checkoutCart, emptyCart } from '../../http';
+import {  emptyCart } from '../../http';
 
 const CartCheckout = ({data}) => { 
 
