@@ -110,8 +110,8 @@ export const deleteCartItem = async (id, productId) => {
 
 // }
 
-export const emptyCart = () => {
-    const response = fetch(`http://localhost:4000/cart`, {
+export const emptyCart =async  () => {
+    const response = await fetch(`http://localhost:4000/cart`, {
         method: "DELETE"
     });
 
@@ -125,8 +125,8 @@ export const emptyCart = () => {
     return data.success;
 }
 
-export const patchCartItems = (cartItems) => {
-    const response = fetch(`http://localhost:4000/cart`, {
+export const patchCartItems = async (cartItems) => {
+    const response = await fetch(`http://localhost:4000/cart`, {
         method: 'PUT',
         body: JSON.stringify(cartItems),
         headers: {
@@ -142,4 +142,25 @@ export const patchCartItems = (cartItems) => {
     const data = response.json();
 
     return data.success;
+}
+
+
+export const filterProducts = async (searchStr) => {
+const response = await fetch(`http://localhost:4000/products/filter`, {
+    method: "POST",
+    body: JSON.stringify({searchStr}),
+    headers: {
+        "Content-Type": "application/json"
+    }
+});
+
+
+if(!response.ok) {
+    throw new Error("Couldn't filter items");
+
+}
+
+const data =await response.json();
+
+return data.products;
 }

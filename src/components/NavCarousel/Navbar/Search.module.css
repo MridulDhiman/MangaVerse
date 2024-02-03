@@ -25,7 +25,12 @@
 }
 
 .search-icon {
-    fill: #8e8e8e;
+    fill: rgb(142, 142, 142);
+    cursor:pointer;
+}
+
+.search-icon:hover{
+    fill:rgb(77, 53, 53);
 }
 
 .search-text {
