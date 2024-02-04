@@ -276,6 +276,10 @@ if(product?.includes(true) || anime?.includes(true)) {
   }
 }
 
+else {
+  setPItems(data);
+}
+
 
 }
 

@@ -12,9 +12,13 @@ const SearchResult = ({data, onMouseOver, onMouseLeave}) => {
         </div>
     }
 
+
+    const FIRST_ITEM_STYLES = {
+      background: "lightgray"
+    };
     
 
-    const dataItems = data.map((item) => {
+    const dataItems = data.map((item, index) => {
          return <div key={item._id}>
           <Link to={`products/${item.slug}`} style={{textDecoration: "none", color: "black"}}>
           <div onClick={()=> {onMouseLeave()}} className={styles.item}>

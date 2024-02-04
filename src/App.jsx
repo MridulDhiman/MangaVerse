@@ -27,7 +27,7 @@ const NavBarStyles = {
   background: "white",
   boxShadow: "0px 0px 0px white",
   // boxShadow: "0px 56px 42px -8px rgba(0,0,0,0.1)",
-  zIndex: "0",
+  // zIndex: "0",
   borderBottom: "0.5px solid lightgrey",
 };
 

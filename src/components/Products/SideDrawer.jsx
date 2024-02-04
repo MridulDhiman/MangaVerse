@@ -10,7 +10,7 @@ export default function SideDrawer({
   onBtnClick
 }) {
   const {productContent, animeContent} = useContext(FilterContext);
-  const [isOpen, setIsOpen] = useState([true, false, false]);
+  const [isOpen, setIsOpen] = useState([false, false, false]);
   const handleClick = (index) => {
     setIsOpen((prev) => {
       const new_state = [false, false, false];
