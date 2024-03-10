@@ -4,7 +4,7 @@ import { useLoaderData, useLocation, useNavigate, useParams } from "react-router
 
 
 import styles from "./ProductItem.module.css";
-import ItemContent from "./itemContent";
+import ItemContent from "./ItemContent";
 import ItemImage from "./ItemImage";
 import AddToCart from "./AddToCart";
 import { getProductById } from "../../../http";
