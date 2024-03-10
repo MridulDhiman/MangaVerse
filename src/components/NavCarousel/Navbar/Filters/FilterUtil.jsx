@@ -13,6 +13,7 @@ export default function FilterUtil({className,textClass,popOverStyles, content,o
     className= {className}
     onMouseOver= {() => {onMouseOver(index)}}
     onMouseLeave={onMouseLeave}
+
     >
        {
          item.hasContent ? 

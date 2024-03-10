@@ -25,12 +25,17 @@ export const createItemDescArray = (itemTypes) => {
     }
 
     const priceList = items.map((item) => parseInt(item.product.price));
+    const quantityList = items.map((item) => parseInt(item.quantity));
+
+    console.log("items: ", items);
 // [1999, 1999]
 
 let sum = 0;
-for(let prices of priceList) {
-sum+= prices;
+
+for(let i  =0;i<items.length;i++) {
+sum += (priceList[i] * quantityList[i])
 }
+
 
 return sum;
   }

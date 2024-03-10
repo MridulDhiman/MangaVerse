@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       },
       {
         path: "offers-discount-coupon",
-        element: <Coupons />,
+        element: <>Coupon and Offers</>,
       },
       {
         path: "products",

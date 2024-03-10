@@ -1,8 +1,8 @@
 
-
+const api_url = `${import.meta.env.VITE_API_URL}`;
 
 export const fetchProducts = async () => {
-const response = await fetch(`http://localhost:4000/products`);
+const response = await fetch(`${api_url}/products`);
 
 if(!response.ok) {
     throw new Error("Products couldn't be fetched.");
@@ -13,7 +13,7 @@ return products;
 }
 
 export const addItemToCart = async (data) => {
-const response = await fetch("http://localhost:4000/cart", {
+const response = await fetch(`${api_url}/cart`, {
 method: "POST",
 body: JSON.stringify({
     ...data
@@ -33,7 +33,7 @@ return cartItem;
 
 
 export const getCartItems = async () => {
-    const response = await fetch(`http://localhost:4000/cart`);
+    const response = await fetch(`${api_url}/cart`);
 
     if(!response.ok) {
         throw new Error("Cart Items couldn't be fetched...");
@@ -44,7 +44,7 @@ export const getCartItems = async () => {
 }
 
 export const getProductById = async (id) => {
-    const response = await fetch(`http://localhost:4000/products/${id}`);
+    const response = await fetch(`${api_url}/products/${id}`);
 
     if(!response.ok) {
         throw new Error(`Product with id ${id} could not be fetched...`);
@@ -55,7 +55,7 @@ export const getProductById = async (id) => {
 }
 
 export const deleteCartItem = async (id, productId) => {
-    const response = await fetch(`http://localhost:4000/cart/${id}/p/${productId}`, {
+    const response = await fetch(`${api_url}/cart/${id}/p/${productId}`, {
         method: "DELETE"
     });
 
@@ -69,7 +69,7 @@ export const deleteCartItem = async (id, productId) => {
 
 
 // export const checkoutCart =  async (checkoutData) => {
-// const response = await fetch(`http://localhost:4000/checkout`, {
+// const response = await fetch(`${api_url}/checkout`, {
 // method: 'POST',
 // body: JSON.stringify(checkoutData),
 // headers: {
@@ -91,7 +91,7 @@ export const deleteCartItem = async (id, productId) => {
 //     description: "Online Anime & Manga Ecommerce MarketPlace",
 //     image: "https://avatars.githubusercontent.com/u/60432617?s=400&u=3e7dcd371db35dee1938a00e38440933a7581392&v=4",
 //     order_id: order.id,
-//     callback_url: "http://localhost:4000/paymentVerification",
+//     callback_url: "${api_url}/paymentVerification",
 //     prefill: {
 //         "name": "John Doe",
 //         "email": "johndoe@gmail.com",
@@ -111,7 +111,7 @@ export const deleteCartItem = async (id, productId) => {
 // }
 
 export const emptyCart =async  () => {
-    const response = await fetch(`http://localhost:4000/cart`, {
+    const response = await fetch(`${api_url}/cart`, {
         method: "DELETE"
     });
 
@@ -126,7 +126,7 @@ export const emptyCart =async  () => {
 }
 
 export const patchCartItems = async (cartItems) => {
-    const response = await fetch(`http://localhost:4000/cart`, {
+    const response = await fetch(`${api_url}/cart`, {
         method: 'PUT',
         body: JSON.stringify(cartItems),
         headers: {
@@ -146,7 +146,7 @@ export const patchCartItems = async (cartItems) => {
 
 
 export const filterProducts = async (searchStr) => {
-const response = await fetch(`http://localhost:4000/products/filter`, {
+const response = await fetch(`${api_url}/products/filter`, {
     method: "POST",
     body: JSON.stringify({searchStr}),
     headers: {

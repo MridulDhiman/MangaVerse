@@ -19,7 +19,7 @@ const ItemAccordion = ({desc}) => {
 
        <div>
         {isOpen && <div style={{borderBottom: desc === 'Offers' ? "none": "1px solid black"}} className={styles.main}>
-            Hello Everyone
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis perspiciatis ipsam.
             </div>}
        </div>
     </div>

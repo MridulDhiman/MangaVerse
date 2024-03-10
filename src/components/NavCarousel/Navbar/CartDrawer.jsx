@@ -111,7 +111,7 @@ export default function CartDrawer({onClose}) {
     return <p>Loading...</p>
   }
 
-  let subTotal = findSubTotalOfCart(items);
+  let subTotal = findSubTotalOfCart(data);
   console.log(subTotal);
   return (
     

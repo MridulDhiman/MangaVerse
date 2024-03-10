@@ -37,7 +37,7 @@ const {mutate} = useMutation({
   },
 
   onError: () => {
-    window.alert("Checkout unsucccessful");
+    window.alert("Checkout unsuccessful");
   }
 })
 

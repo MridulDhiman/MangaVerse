@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Popover} from "react-tiny-popover";
-import { Link,useLocation} from "react-router-dom";
+import { Link,useLocation, useNavigate} from "react-router-dom";
 
 
 
@@ -18,7 +18,8 @@ import moreStyles from "./MoreFilter.module.css";
 import categoriesStyles from "./TopCategoriesFilter.module.css";
 
 const Container = ({children, className, onMouseLeave, onMouseOver}) => {
-    return  <li className={className} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>{children}</li>
+    const navigate = useNavigate();
+    return  <li onClick={()=> navigate("/products")} className={className} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>{children}</li>
 }
 
 const Container1 = ({className, children, onMouseOver, onMouseLeave}) => {
