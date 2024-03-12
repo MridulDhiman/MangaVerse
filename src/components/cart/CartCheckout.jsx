@@ -47,15 +47,18 @@ useEffect(()=> {
 
   if(data.length > 0) {
 
+    let subTotal = 0;
+    for(let item of data) {
+      const {_id, product, quantity} = item;
+      subTotal += (product.price) * quantity;
+    }
+
+    setSubTotal(subTotal);
+
 
     for(let item of data) {
       const {_id, product, quantity} = item;
       console.log(_id, product,quantity)
-      setSubTotal((prev) => {
-            const new_state = prev + (product.price * quantity);
-            // console.log("new state: ", new_state);
-            return new_state;
-      });
       setCheckoutData((prev) => {
         const new_state = [...prev, {
           id: _id,

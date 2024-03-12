@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import CartItem from "./CartItem";
 
 import styles from "./CartItems.module.css";
@@ -47,6 +47,7 @@ const patchReducer = (state, action) => {
 const CartItems = ({ items, initialCart }) => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const [cartItems, setItems] = useState(items);
   const [patchRequest, dispatchNewRequest] = useReducer(patchReducer, initialCart);
   const {isPending,  mutate: mutatePatch} = useMutation({
     mutationFn: (data) => patchCartItems(data),
@@ -57,7 +58,7 @@ return prevData;
    },
    onSettled: () => {
      queryClient.invalidateQueries({queryKey: ['cart'], exact: true})
-     navigate(0);
+    //  navigate(0);
    },
    onError: (error, data,context) => {
     queryClient.setQueryData(['cart'], context);
@@ -65,6 +66,18 @@ return prevData;
   });
 
 
+
+
+  useEffect(()=> {
+setItems((prev) => {
+  
+  if(prev!== items) {
+    return items;
+  }
+
+  return prev;
+});
+  },[items]);
   
   const incrementHandler = (id) => {
     dispatchNewRequest({
@@ -93,7 +106,7 @@ return prevData;
   }
 
 
-  const data = items.map((item) => (
+  const data = cartItems.map((item) => (
     <CartItem incCount={incrementHandler} decCount={decrementHandler} key={item.product._id} item={item} />
   ));
   return<>

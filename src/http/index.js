@@ -40,6 +40,7 @@ export const getCartItems = async () => {
     }
 
     const cart = await response.json();
+    console.log(cart);
     return cart;
 }
 
@@ -128,7 +129,9 @@ export const emptyCart =async  () => {
 export const patchCartItems = async (cartItems) => {
     const response = await fetch(`${api_url}/cart`, {
         method: 'PUT',
-        body: JSON.stringify(cartItems),
+        body: JSON.stringify({
+            items: cartItems
+        }),
         headers: {
             "Content-Type": "application/json"
         }

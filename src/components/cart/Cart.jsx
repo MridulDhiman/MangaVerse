@@ -17,13 +17,16 @@ const data = useSelector((state) => state.cart.items);
 
 
 let initialCart = [];
-for(let item of data) {
-     const x = {
-      id: item._id,
-      quantity: item.quantity
-     };
-     initialCart.push(x);
+
+
+  for(let item of data) {
+    const x = {
+     id: item._id,
+     quantity: item.quantity
+    };
+    initialCart.push(x);
 }
+
 
 
 
